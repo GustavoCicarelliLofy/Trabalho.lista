@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Juros simples em empréstimo</h1>
+    quantidade de messes
+    <input type="number" id="quacad" value="0" min="0" oninput="cal()" />
+    <div id="resposta">Nem um mês</div>
+    valor com juros
+    <div id="valordes">0</div>
+    
+    <script>
+      let messes = 0, emprestimo = 1000
+      valordes.innerText = `R$${emprestimo + messes * (emprestimo * 0.05)}`;
+
+      function cal() {
+        messes = quacad.value;
+        resposta.innerText = `${messes != 0?messes:"Nem um"} ${messes > 1?"messes":"mês"}`;
+        valordes.innerText = `R$${emprestimo + messes * (emprestimo * 0.05)}`;
+      }
+    </script>
+  </body>
+</html>

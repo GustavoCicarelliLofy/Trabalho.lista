@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Cálculo do valor total de uma compra</h2>
+    quamtidade de cadernos
+    <div id="quacad">0 cadernos</div>
+    <button onclick="adi()">adicionar caderno</button>
+    <div id="resposta">R$0</div>
+    <script>
+      let cader = 0,
+        preCade = 12.5;
+      function adi() {
+        cader++;
+        quacad.innerText = `${cader} cadernos`;
+        resposta.innerText = `R$${preCade * cader}`;
+      }
+    </script>
+  </body>
+</html>

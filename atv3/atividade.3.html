@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Desconto em produto</h2>
+    valor do produto
+    <input type="number" id="quacad" value="0" min="0" oninput="cal()" />
+    <div id="resposta">R$0</div>
+    produto com desconto de 10%
+    <div id="valordes">R$0</div>
+    o desconto
+    <div id="desconto">R$0</div>
+    <script>
+      let valor = 0;
+      function cal() {
+        let valor = quacad.value;
+        resposta.innerText = `R$${valor}`;
+        valordes.innerText = `R$${valor - valor * 0.1}`;
+        desconto.innerText = `R$${valor * 0.1}`;
+      }
+    </script>
+  </body>
+</html>
